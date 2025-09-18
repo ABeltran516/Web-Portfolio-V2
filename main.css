@@ -14,6 +14,13 @@
     --container-color: oklch(1 0 0);
     --border-color: oklch(0 0 0 / 5%);
 
+    /* Shape Colors */
+    --shape-color-red: oklch(0.6955 0.1964 17.38);
+    --shape-color-yellow: oklch(0.9592 0.1728 107.13);
+    --shape-color-blue: oklch(0.796 0.125 232.3);
+    --shape-color-brown: oklch(0.6719 0.0404 10.02);
+    --shape-color-gray: oklch(0.5716 0.0171 229.17);
+
     /* Font-sizes */
     --font-size-small: clamp(0.8rem, 0.7rem + 0.5vw, 1rem);
     --font-size-regular: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
