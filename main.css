@@ -67,6 +67,7 @@ body {
     height: 100vh;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 .Absolute {
@@ -177,10 +178,21 @@ body {
 
 }
 
+.Main-social_media a {
+    display: inline-flex;
+    transition: transform 0.5s;
+}
+
 .Main-social_media a img {
     width: 100%;
     max-width: 2.6rem;
     height: 100%;
+}
+
+.Main-social_media a img:hover {
+    transform: scale(1.3);
+    transition: transform 0.4s;
+    cursor: pointer;
 }
 
 .Contact-btn {
@@ -195,9 +207,13 @@ body {
     font-weight: bold;
     border-radius: 20rem;
     border: 2px solid var(--border-color);
+    transition: background-color 0.3s;
 }
 
-
+.Contact-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 
 .Container-styles {
     display: flex;
@@ -211,7 +227,6 @@ body {
     background-color: var(--container-color);
     padding: var(--spacing-medium);
 }
-
 
 .container {
     display: flex;
