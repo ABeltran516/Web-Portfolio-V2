@@ -41,7 +41,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -55,6 +55,8 @@ body {
 /* Section Main */
 
 .Main {
+    display: none;
+    /* Men at work */
     width: 100%;
     height: 100vh;
 }
@@ -261,6 +263,53 @@ body {
 .Item:nth-child(4) {
     height: 32%;
     width: 25%;
+}
+
+/* About Me Section */
+
+.About-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+}
+
+.About-me_title {
+    font-size: var(--font-size-big);
+    color: var(--title-color);
+    margin-top: 6rem;
+    padding: 5rem 10rem 5rem 2rem;
+}
+
+.About-me_description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-big)
+}
+
+.About-me_description a img {
+    max-width: 10rem;
+    border-radius: 100%;
+
+}
+
+.About-me_container {
+    max-width: 90rem;
+    max-height: 75rem;
+    text-align: justify;
+    padding: 8rem 12rem;
+    font-size: var(--font-size-extralarge);
+    font-weight: 500;
+    color: var(--text-color);
+    border-radius: 2rem;
+    background-color: var(--container-color);
+}
+
+.About-me_container pre {
+    font-family: "Noto Sans", sans-serif;
 }
 
 /* Queries */
