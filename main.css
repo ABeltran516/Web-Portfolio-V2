@@ -225,7 +225,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: auto;
     align-items: center;
 }
 
@@ -240,7 +240,7 @@ body {
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto;
     gap: var(--spacing-big)
 }
 
@@ -277,6 +277,9 @@ body {
 }
 
 .About-me_container {
+    container-type: inline-size;
+    container-name: about;
+    width: 100%;
     max-width: 90rem;
     max-height: 75rem;
     text-align: justify;
@@ -292,10 +295,28 @@ body {
     font-family: "Noto Sans", sans-serif;
 }
 
+.About-me_description button {
+    margin: 4rem auto;
+    width: 18rem;
+    height: 5.2rem;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    font-size: var(--font-size-big);
+    font-weight: bold;
+    border-radius: 20rem;
+    border: 2px solid var(--border-color);
+}
+
+.About-me_description button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 /* Section Info */
 
 .Container-styles {
     display: flex;
+    height: 100vh;
     color: var(--text-color);
     background-color: var(--main-color);
     border: 2px solid var(--border-color);
@@ -445,5 +466,36 @@ body {
 
     .Shape-item-10 {
         display: none;
+    }
+}
+
+@container about (max-width: 768px) {
+    .About-me_container {
+        font-size: var(--font-size-big);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .About-me_description a::after,
+    .About-me_description a::before {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .About-me_description a img {
+        max-width: 10rem;
+    }
+
+    .About-me_container {
+        padding: 3rem 4rem;
+        font-size: var(--font-size-regular)
+    }
+
+    .About-me_description button {
+        margin: 2rem;
+        width: 16rem;
+        height: 4rem;
+
     }
 }
