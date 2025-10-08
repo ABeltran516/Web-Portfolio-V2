@@ -222,7 +222,8 @@ body {
 /* About Me Section */
 
 .About-me {
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -320,10 +321,18 @@ body {
     color: var(--text-color);
     background-color: var(--main-color);
     border: 2px solid var(--border-color);
-    border-radius: 1.2rem;
+    border-radius: 4rem;
+}
+
+.Container-styles img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.6rem;
 }
 
 .Item {
+    height: 28rem;
+    width: 42rem;
     background-color: var(--container-color);
     padding: var(--spacing-medium);
 }
@@ -332,13 +341,15 @@ body {
     display: flex;
     width: 100%;
     height: 100vh;
-    flex-direction: row;
-    gap: 2%;
     flex-wrap: wrap;
+    padding: 20rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-big);
     background-color: var(--body-color);
 }
 
-.Item:nth-child(1),
+/* .Item:nth-child(1),
 .Item:nth-child(5),
 .Item:nth-child(7) {
     height: 32%;
@@ -361,7 +372,7 @@ body {
 .Item:nth-child(4) {
     height: 32%;
     width: 25%;
-}
+} */
 
 /* Properties */
 
