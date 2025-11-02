@@ -12,6 +12,7 @@
     --text-color: oklch(0.4907 0.0556 286.77);
     --body-color: oklch(0.9794 0.0082 301.36);
     --container-color: oklch(1 0 0);
+    --container-neo-color: oklch(0.956 0.004 286.32);
     --border-color: oklch(0 0 0 / 5%);
 
     /* Shape Colors */
@@ -39,6 +40,10 @@
 
     /* Angle */
     --baxis-angle: -15deg;
+
+    /* Box-shadow */
+    --outer-shadow: -12px -12px 24px #fff, 12px 12px 24px #aab7ca;
+    --inner-shadow: inset -7px -7px 12px #fff, inset 7px 7px 12px #aab7ca;
 }
 
 html {
@@ -57,7 +62,8 @@ body {
 /* Section Main */
 
 .Main {
-    display: none;
+    display: flex;
+    flex-direction: column;
     /* Men at work */
     width: 100%;
     height: 100vh;
@@ -222,8 +228,8 @@ body {
 /* About Me Section */
 
 .About-me {
-    /* display: flex; */
-    display: none;
+    /*  display: none; */
+    display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
@@ -337,16 +343,111 @@ body {
     padding: var(--spacing-medium);
 }
 
-.container {
+.Container {
+    /* display: none; */
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
     flex-wrap: wrap;
     padding: 20rem 0;
     justify-content: center;
     align-items: center;
     gap: var(--spacing-big);
     background-color: var(--body-color);
+}
+
+/* Section Form */
+.Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.Contact-container {
+    display: flex;
+    width: clamp(30rem, 40rem + 20vw, 60rem);
+    height: clamp(45rem, 60rem + 20vh, 90%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-small);
+    background-color: var(--container-neo-color);
+    border: 1px solid var(--border-color);
+    border-radius: 2rem;
+    box-shadow: var(--outer-shadow)
+        /* Estoy feliz de por fin comprender el box shadow apropiadamente. */
+}
+
+.Contact-container h2 {
+    margin-bottom: var(--spacing-bigger);
+    font-size: var(--font-size-extralarge);
+    color: var(--title-color);
+}
+
+.Contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+
+/* fieldset legend da estilos al pequeño texto en la esquina superior izquierda del input. */
+fieldset legend {
+    padding: 0 .75rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-left: .4rem;
+}
+
+.Form-group {
+    margin: 1rem 0;
+    padding: var(--spacing-small);
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+}
+
+.Form-group input {
+    width: 100%;
+    height: 4.8rem;
+    padding: var(--spacing-small);
+    border: none;
+    border-radius: .6rem;
+    background-color: var(--container-neo-color);
+    box-shadow: var(--inner-shadow);
+}
+
+.Form-group textarea {
+    width: 100%;
+    height: 13rem;
+    padding: var(--spacing-medium);
+    border: none;
+    border-radius: .32rem;
+    background-color: var(--container-neo-color);
+    box-shadow: var(--inner-shadow);
+
+}
+
+.Form-group input:focus {
+    outline: 2px solid var(--border-color);
+}
+
+.Action-btn {
+    margin: var(--spacing-medium) auto;
+    width: 85%;
+    height: 5.2rem;
+    background-color: var(--main-color);
+    color: var(--body-color);
+    font-size: var(--font-size-big);
+    font-weight: bold;
+    border-radius: 1rem;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--outer-shadow);
+}
+
+.Action-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 /* .Item:nth-child(1),
@@ -508,5 +609,27 @@ body {
         width: 16rem;
         height: 4rem;
 
+    }
+}
+
+@media (max-width: 510px) {
+
+    body {
+        padding: 2rem;
+    }
+
+    .Contact-container {
+        width: 90%;
+        height: auto;
+        padding: var(--spacing-medium) 0;
+    }
+
+    .Contact-container h2 {
+        margin: 0;
+        padding: var(--spacing-bigger);
+    }
+
+    .Contact-form {
+        width: 80%;
     }
 }

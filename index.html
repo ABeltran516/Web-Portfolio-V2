@@ -72,7 +72,7 @@
             <button>Show CV!</button>
         </div>
     </section>
-    <div class="container">
+    <div class="Container">
         <div class="Item Container-styles">
             <img src="./Assets/Img/burningship.png" alt="burningShip">
         </div>
@@ -98,6 +98,28 @@
             <img src="./Assets/Img/volcanos.png" alt="volcanoes">
         </div>
     </div>
+    <section id="Contact" class="Contact">
+        <div class="Contact-container">
+            <h2>Let's get in touch!</h2>
+            <form class="Contact-form" action="https://formsubmit.co/beltran1606@gmail.com" method="POST">
+                <fieldset class="Form-group">
+                    <legend for="name">Name</legend>
+                    <input type="text" id="name" class="Form-control " name="name" placeholder="Pedro Páramo" required>
+                </fieldset>
+                <fieldset class="Form-group">
+                    <legend for="Email">Email</legend>
+                    <input type="email" id="Email" class="Form-control" name="email"
+                        placeholder="Amante_delosgatitosOficial@gmail.com" required>
+                </fieldset>
+                <fieldset class="Form-group">
+                    <legend for="Message">Message</legend>
+                    <textarea type="text" id="Message" class="Form-control" rows="5" name="message"
+                        placeholder="Hi! I wonder if i..." required></textarea>
+                </fieldset>
+                <button type="Submit" class="Action-btn">Send Message!</button>
+            </form>
+        </div>
+    </section>
 </body>
 
 </html>
