@@ -377,7 +377,6 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 2rem;
     box-shadow: var(--outer-shadow)
-        /* Estoy feliz de por fin comprender el box shadow apropiadamente. */
 }
 
 .Contact-container h2 {
@@ -428,7 +427,8 @@ fieldset legend {
 
 }
 
-.Form-group input:focus {
+.Form-group input:focus,
+textarea:focus {
     outline: 2px solid var(--border-color);
 }
 
@@ -449,31 +449,6 @@ fieldset legend {
     cursor: pointer;
     transform: scale(1.05);
 }
-
-/* .Item:nth-child(1),
-.Item:nth-child(5),
-.Item:nth-child(7) {
-    height: 32%;
-    width: 40%;
-}
-
-.Item:nth-child(2),
-.Item:nth-child(8) {
-    height: 32%;
-    width: 30%;
-}
-
-.Item:nth-child(3),
-.Item:nth-child(6),
-.Item:nth-child(9) {
-    height: 32%;
-    flex-grow: 1;
-}
-
-.Item:nth-child(4) {
-    height: 32%;
-    width: 25%;
-} */
 
 /* Properties */
 
