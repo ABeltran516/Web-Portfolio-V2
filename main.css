@@ -321,6 +321,19 @@ body {
 
 /* Section Info */
 
+.Container {
+    /* display: none; */
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 20rem 0;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-big);
+    background-color: var(--body-color);
+}
+
 .Container-styles {
     display: flex;
     height: 100vh;
@@ -341,19 +354,19 @@ body {
     width: 42rem;
     background-color: var(--container-color);
     padding: var(--spacing-medium);
+
+    /* Para la transición suave al hacer hover */
+    transition: transform 260ms cubic-bezier(.2, .8, .2, 1), box-shadow 260ms ease;
+    will-change: transform;
+    transform-origin: center center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-.Container {
-    /* display: none; */
-    display: flex;
-    width: 100%;
-    height: auto;
-    flex-wrap: wrap;
-    padding: 20rem 0;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-big);
-    background-color: var(--body-color);
+.Item:hover {
+    cursor: pointer;
+    transform: scale(1.05) translateZ(0);
+    box-shadow: var(--outer-shadow);
 }
 
 /* Section Form */
@@ -502,6 +515,11 @@ footer {
 
 .Content-list li a:hover {
     text-decoration: underline;
+}
+
+.Copy {
+    margin: .5rem;
+    color: var(--text-color);
 }
 
 /* Properties */
