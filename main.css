@@ -450,6 +450,60 @@ textarea:focus {
     transform: scale(1.05);
 }
 
+/* Footer Section */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.Footer-content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.Footer-content img {
+    width: 100%;
+    height: auto;
+}
+
+.Footer-content .Content-list {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 25rem;
+    height: auto;
+    padding-top: 1.5rem;
+    gap: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Content-list li {
+    list-style: none;
+}
+
+.Content-list li a {
+    text-decoration: none;
+    color: var(--body-color);
+    font-size: var(--font-size-big);
+    font-weight: 600;
+}
+
+.Content-list li a:hover {
+    text-decoration: underline;
+}
+
 /* Properties */
 
 /* Probar esto */
@@ -606,5 +660,31 @@ textarea:focus {
 
     .Contact-form {
         width: 80%;
+    }
+}
+
+@media (min-width: 560px) {
+
+    .Footer-content .Content-list {
+        padding-top: 3.5rem;
+    }
+}
+
+@media (min-width: 850px) {
+
+    .Footer-content .Content-list {
+        padding-top: 4.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .Footer-content .Content-list {
+        padding-top: 13rem;
+        gap: 4rem;
+    }
+
+    .Content-list li a {
+        font-size: var(--font-size-extralarge);
     }
 }
