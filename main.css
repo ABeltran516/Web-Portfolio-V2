@@ -840,8 +840,13 @@ footer {
     }
 
     .Icon-single {
-        grid-template-columns: repeat(3, 1fr);
         gap: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .Icon-single {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -856,7 +861,7 @@ footer {
     }
 
     .Icon-single {
-        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(3, 1fr); */
         gap: 1.2rem;
         min-height: 12rem;
     }
