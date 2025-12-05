@@ -1,3 +1,5 @@
+const contactButton = document.getElementById("Contact-btn")
+
 const labelLanguage = document.getElementById("Label-lang")
 const labelFramework = document.getElementById("Label-frame")
 const labelTools = document.getElementById("Label-tool")
@@ -60,3 +62,8 @@ labelSkills.addEventListener("click", () => {
     changeLabels()
 })
 
+contactButton.addEventListener('click', () => {
+    document.getElementById('Contact').scrollIntoView({
+        behavior: 'smooth'
+    });
+});

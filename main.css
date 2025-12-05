@@ -339,11 +339,18 @@ body {
 
 .Skill-container {
     margin: 0 auto;
-    padding-top: 7rem;
+    padding-top: 4rem;
     border-radius: 2rem;
     background-color: var(--container-neo-color);
     width: 75%;
     height: auto;
+}
+
+.Skill-container h2 {
+    text-align: center;
+    font-size: var(--font-size-big);
+    color: var(--title-color);
+    padding-bottom: 2rem;
 }
 
 .Labels-container {
