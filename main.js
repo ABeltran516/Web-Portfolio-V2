@@ -10,7 +10,56 @@ const iconFramework = document.getElementById("Icon-frame")
 const iconTools = document.getElementById("Icon-tool")
 const iconSkills = document.getElementById("Icon-skill")
 
+const labelTailwind = document.getElementById("Label-tw")
+const labelBatabit = document.getElementById("Label-batabit")
+const labelMokepon = document.getElementById("Label-mokepon")
+
+const frameTailwind = document.getElementById("Frame-tw")
+const frameBatabit = document.getElementById("Frame-batabit")
+const frameMokepon = document.getElementById("Frame-mokepon")
+
 let choose = "languageLabel"
+let chooseProject = "tailwindLabel"
+
+const changeProject = () => {
+    cleanProject();
+    if (choose === "tailwindLabel") {
+        labelTailwind.classList.add("Label_active");
+        frameTailwind.classList.add("Project-frame_active");
+    } else if (choose === "batabitLabel") {
+        labelBatabit.classList.add("Label_active");
+        frameBatabit.classList.add("Project-frame_active");
+    } else if (choose === "mokeponLabel") {
+        labelMokepon.classList.add("Label_active");
+        frameMokepon.classList.add("Project-frame_active");
+    } else {
+        console.log("error")
+    }
+}
+
+function cleanProject() {
+    labelTailwind.classList.remove("Label_active");
+    frameTailwind.classList.remove("Project-frame_active");
+    labelBatabit.classList.remove("Label_active");
+    frameBatabit.classList.remove("Project-frame_active");
+    labelMokepon.classList.remove("Label_active");
+    frameMokepon.classList.remove("Project-frame_active");
+}
+
+labelTailwind.addEventListener("click", () => {
+    choose = "tailwindLabel"
+    changeProject()
+})
+
+labelBatabit.addEventListener("click", () => {
+    choose = "batabitLabel"
+    changeProject()
+})
+
+labelMokepon.addEventListener("click", () => {
+    choose = "mokeponLabel"
+    changeProject()
+})
 
 const changeLabels = () => {
     removeLabels();
@@ -67,3 +116,5 @@ contactButton.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+/* Falta hacer una refactorización del JavaScript para dejar las funciones más limpias */
