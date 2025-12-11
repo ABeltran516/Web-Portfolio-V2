@@ -361,8 +361,8 @@ body {
 .Project-frame {
     display: flex;
     position: absolute;
-    justify-content: space-around;
-    margin: 2rem;
+    justify-content: space-evenly;
+    padding: 2rem;
     width: 100%;
     height: auto;
     opacity: 0;
@@ -378,7 +378,8 @@ body {
 
 .Project-frame img {
     display: block;
-    max-width: 35rem;
+    width: clamp(30rem, 20vw, 35rem);
+    /* max-width: 35rem; */
     height: 40rem;
     object-fit: cover;
     overflow: hidden;
@@ -390,7 +391,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-medium);
-    max-width: 70rem;
+    width: clamp(30%, 60%, 70rem);
     box-shadow: var(--inner-shadow);
     padding: 4rem;
     border-radius: 1.6rem;
@@ -957,6 +958,10 @@ footer {
 }
 
 @media (max-width: 1440px) {
+    .Project-container {
+        width: 90%;
+    }
+
     .Icons-container {
         min-height: 50rem;
     }
@@ -967,6 +972,27 @@ footer {
 }
 
 @media (max-width: 1024px) {
+    .Project-container {
+        width: 95%;
+    }
+
+    .Project-info {
+        width: 50%;
+        padding: 3.5rem;
+    }
+
+    .Project-info p {
+        font-size: 1.3rem;
+    }
+
+    .Pill {
+        margin: .6rem;
+    }
+
+    .Project-link {
+        margin-top: .5rem;
+    }
+
     .Labels-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -982,12 +1008,54 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .Project-content {
+        height: 75rem;
+    }
+
+    .Project-frame {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4.5rem;
+    }
+
+    .Project-frame img,
+    .Project-info {
+        width: 45rem;
+        height: 30rem;
+        gap: .3rem;
+    }
+
     .Icon-single {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 640px) {
+    .Project-container {
+        width: 100%;
+    }
+
+    .Project-content {
+        height: 75rem;
+    }
+
+    .Project-frame {
+        padding: 2rem;
+    }
+
+    .Project-frame img {
+        width: 85%;
+        height: 25rem;
+        gap: 0rem;
+    }
+
+    .Project-info {
+        width: 85%;
+        height: 35rem;
+        gap: 1rem;
+    }
+
     .Labels-container {
         grid-template-columns: 1fr;
     }
