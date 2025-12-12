@@ -971,6 +971,10 @@ footer {
         gap: 4.5rem;
     }
 
+    .Project-frame img {
+        object-position: center 31%;
+    }
+
     .Project-frame img,
     .Project-info {
         width: 45rem;
@@ -1099,7 +1103,7 @@ footer {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 409px) {
     .Project-labels {
         grid-template-columns: 1fr;
     }
@@ -1115,6 +1119,7 @@ footer {
     .Project-frame img {
         width: 95%;
         height: 20rem;
+        object-position: center 31%;
     }
 
     .Project-info {
