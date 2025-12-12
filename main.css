@@ -213,7 +213,7 @@ body {
 
 .Contact-btn {
     display: block;
-    margin: var(--spacing-big) auto 0;
+    margin: var(--spacing-bigger) auto 0;
     padding: var(--spacing-small) var(--spacing-medium);
     width: 18rem;
     height: 5.2rem;
@@ -479,7 +479,7 @@ body {
     padding-top: 4rem;
     border-radius: 2rem;
     background-color: var(--container-neo-color);
-    width: 75%;
+    width: 80%;
     height: auto;
 }
 
@@ -783,7 +783,7 @@ footer {
     }
 }
 
-/* Queries */
+/* Queries Container */
 
 @container main (max-width: 768px) {
 
@@ -875,54 +875,13 @@ footer {
     }
 }
 
-@media (max-width: 650px) {
-
-    .About-me_description a::after,
-    .About-me_description a::before {
-        width: 10rem;
-        height: 10rem;
-    }
-
-    .About-me_description a img {
-        max-width: 10rem;
-    }
-
-    .About-me_container {
-        padding: 3rem 4rem;
-        font-size: var(--font-size-regular)
-    }
-
-    .About-me_description button {
-        margin: 2rem;
-        width: 16rem;
-        height: 4rem;
-
-    }
-}
-
-@media (max-width: 510px) {
-
-    body {
-        padding: 2rem;
-    }
-
-    .Contact-container {
-        width: 90%;
-        height: auto;
-        padding: var(--spacing-medium) 0;
-    }
-
-    .Contact-container h2 {
-        margin: 0;
-        padding: var(--spacing-bigger);
-    }
-
-    .Contact-form {
-        width: 80%;
-    }
-}
+/* Queries min-width */
 
 @media (min-width: 560px) {
+
+    .Action-btn {
+        margin-top: 8rem;
+    }
 
     .Footer-content .Content-list {
         padding-top: 3.5rem;
@@ -948,14 +907,7 @@ footer {
     }
 }
 
-@media (pointer: coarse),
-(max-width: 640px) {
-
-    /* móviles: no hover tooltips; usar aria-label o title en img */
-    .Tooltip-container .Tooltip-text {
-        display: none !important;
-    }
-}
+/* Queries max-width */
 
 @media (max-width: 1440px) {
     .Project-container {
@@ -1031,6 +983,31 @@ footer {
     }
 }
 
+@media (max-width: 650px) {
+
+    .About-me_description a::after,
+    .About-me_description a::before {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .About-me_description a img {
+        max-width: 10rem;
+    }
+
+    .About-me_container {
+        padding: 3rem 4rem;
+        font-size: var(--font-size-regular)
+    }
+
+    .About-me_description button {
+        margin: 2rem;
+        width: 16rem;
+        height: 4rem;
+
+    }
+}
+
 @media (max-width: 640px) {
     .Project-container {
         width: 100%;
@@ -1076,6 +1053,28 @@ footer {
     }
 }
 
+@media (max-width: 510px) {
+
+    body {
+        padding: 2rem;
+    }
+
+    .Contact-container {
+        width: 90%;
+        height: auto;
+        padding: var(--spacing-medium) 0;
+    }
+
+    .Contact-container h2 {
+        margin: 0;
+        padding: var(--spacing-bigger);
+    }
+
+    .Contact-form {
+        width: 80%;
+    }
+}
+
 @media (max-width: 425px) {
 
     .Project-info {
@@ -1100,6 +1099,65 @@ footer {
     }
 }
 
+@media (max-width: 375px) {
+    .Project-labels {
+        grid-template-columns: 1fr;
+    }
+
+    .Label {
+        font-size: 1.3rem;
+    }
+
+    .Project-content {
+        height: 70rem;
+    }
+
+    .Project-frame img {
+        width: 95%;
+        height: 20rem;
+    }
+
+    .Project-info {
+        width: 100%;
+        padding: 2.5rem;
+    }
+
+    .Project-info h4 {
+        margin: 1.3rem 0;
+    }
+
+    .Skill-container {
+        width: 100%;
+    }
+
+    .Icons-container {
+        min-height: 70rem;
+    }
+
+    .Icon-single img {
+        width: 70%;
+    }
+
+    .Contact-container {
+        width: 100%;
+        padding: var(--spacing-bigger) 0;
+    }
+
+    .Contact-container h2 {
+        margin: 1rem;
+        font-size: var(--font-size-extralarge);
+    }
+
+    .Action-btn {
+        width: 65%;
+        height: 5rem;
+    }
+
+    .Footer-content .Content-list {
+        padding-top: 0.5rem;
+    }
+}
+
 /* Accessibility: reduced motion */
 @media (prefers-reduced-motion: reduce) {
 
@@ -1107,5 +1165,14 @@ footer {
     .Tooltip-text {
         transition: none !important;
         animation: none !important;
+    }
+}
+
+@media (pointer: coarse),
+(max-width: 640px) {
+
+    /* móviles: no hover tooltips; usar aria-label o title en img */
+    .Tooltip-container .Tooltip-text {
+        display: none !important;
     }
 }
