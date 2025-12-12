@@ -1078,6 +1078,18 @@ footer {
 
 @media (max-width: 425px) {
 
+    .Project-info {
+        height: 37rem;
+    }
+
+    .Project-info_pills .Pill {
+        margin: .6rem 0;
+    }
+
+    .Project-link {
+        margin: 0;
+    }
+
     .Icons-container {
         min-height: 65rem;
     }
